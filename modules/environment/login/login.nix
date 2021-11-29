@@ -34,6 +34,7 @@ writeScript "login" ''
     -b ${installationDir}/etc:/etc \
     -b ${installationDir}/tmp:/tmp \
     -b ${installationDir}/usr:/usr \
+    -b ${installationDir}/dev/shm:/dev/shm \
     -b /:/android \
     --link2symlink \
     ${builtins.concatStringsSep " " extraProotOptions} \
